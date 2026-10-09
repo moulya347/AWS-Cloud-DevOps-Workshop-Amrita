@@ -1,105 +1,248 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Moulya MC - Resume</title>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>Moulya MC | Resume</title>
+
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
-            background-color: #eaf0f6;
             margin: 0;
-            padding: 30px;
-            color: #333333;
+            padding: 35px 15px;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f5f1e8;
+            color: #343b36;
+            line-height: 1.7;
         }
 
         .container {
-            max-width: 850px;
+            max-width: 950px;
             margin: auto;
             background-color: #ffffff;
             border-radius: 12px;
             overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.12);
+            box-shadow: 0 10px 35px rgba(32, 56, 42, 0.12);
         }
 
         header {
-            background-color: #17365d;
-            color: white;
+            background-color: #183b32;
+            color: #ffffff;
             text-align: center;
-            padding: 35px 20px;
+            padding: 55px 25px 45px;
+            border-bottom: 5px solid #c5a56a;
+        }
+
+        .label {
+            color: #dfc58e;
+            font-size: 12px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
         }
 
         header h1 {
-            font-size: 34px;
-            margin: 0 0 10px;
-            letter-spacing: 1px;
+            font-size: 42px;
+            letter-spacing: 2px;
+            margin: 0;
         }
 
-        header p {
-            font-size: 16px;
-            margin: 8px 0;
+        .role {
+            color: #e6d9bf;
+            font-size: 17px;
+            margin: 12px 0 5px;
+        }
+
+        .college {
+            color: #d5e1d9;
+            font-size: 14px;
+            margin: 5px 0;
+        }
+
+        .content {
+            padding: 25px 35px;
         }
 
         section {
-            padding: 15px 30px;
-            margin: 10px 20px;
-            border-bottom: 1px solid #e0e6ed;
+            margin-bottom: 30px;
         }
 
-        section h2 {
-            color: #17365d;
-            font-size: 22px;
-            border-bottom: 2px solid #3498db;
-            padding-bottom: 8px;
+        .section-heading {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
         }
 
-        section h3 {
-            color: #2c3e50;
-            font-size: 17px;
-            margin-bottom: 8px;
+        .section-number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            background-color: #e8efe9;
+            color: #245744;
+            font-size: 13px;
+            font-weight: bold;
         }
 
-        section p {
-            font-size: 15px;
-            line-height: 1.7;
+        h2 {
+            color: #214d3c;
+            font-size: 21px;
+            margin: 0;
+        }
+
+        .heading-line {
+            height: 2px;
+            background-color: #c5a56a;
+            flex: 1;
+            margin-left: 5px;
+        }
+
+        p {
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        .summary {
             text-align: justify;
         }
 
-        ul {
-            padding-left: 22px;
-            line-height: 2;
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
         }
 
-        li {
-            font-size: 15px;
+        .skill {
+            background-color: #f2f5f0;
+            color: #28523f;
+            padding: 12px 8px;
+            text-align: center;
+            border-radius: 6px;
+            font-size: 13px;
+            border: 1px solid #e0e8df;
         }
 
-        #projects {
-            border-bottom: none;
+        .card {
+            background-color: #fbfaf6;
+            border-left: 4px solid #c5a56a;
+            border-radius: 5px;
+            padding: 17px 20px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #214d3c;
+            font-size: 16px;
+            margin: 0 0 7px;
+        }
+
+        .subtitle {
+            color: #8c754b;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .education-name {
+            font-weight: bold;
+            color: #214d3c;
+            font-size: 16px;
+        }
+
+        .education-details {
+            color: #646b65;
+            font-size: 14px;
+        }
+
+        .interests {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .interest {
+            background-color: #e8efe9;
+            color: #245744;
+            border: 1px solid #d5e2d7;
+            border-radius: 20px;
+            padding: 7px 13px;
+            font-size: 13px;
         }
 
         footer {
-            background-color: #17365d;
-            color: white;
+            background-color: #183b32;
+            color: #e6d9bf;
             text-align: center;
-            padding: 15px;
-            font-size: 13px;
+            padding: 17px;
+            font-size: 12px;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 600px) {
             body {
-                padding: 10px;
+                padding: 12px 7px;
+            }
+
+            header {
+                padding: 40px 15px;
             }
 
             header h1 {
-                font-size: 27px;
+                font-size: 31px;
             }
 
-            section {
-                padding: 10px;
-                margin: 10px;
+            .role {
+                font-size: 15px;
+            }
+
+            .content {
+                padding: 22px 17px;
+            }
+
+            .skills {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .card {
+                padding: 14px;
+            }
+        }
+
+        @media print {
+            body {
+                padding: 0;
+                background-color: white;
+            }
+
+            .container {
+                box-shadow: none;
+                max-width: 100%;
+            }
+
+            header,
+            footer,
+            .skill,
+            .section-number,
+            .interest {
+                -webkit-print-color-adjust: exact;
+                print-color-adjust: exact;
+            }
+
+            section,
+            .card {
+                break-inside: avoid;
             }
         }
     </style>
@@ -110,80 +253,170 @@
     <div class="container">
 
         <header>
+            <div class="label">Personal Portfolio & Resume</div>
+
             <h1>Moulya MC</h1>
-            <p>BCA Student | Aspiring Software Developer</p>
-            <p>Amrita Vishwa Vidyapeetham, Mysuru Campus</p>
+
+            <p class="role">
+                BCA Student | Aspiring Software Developer & UI/UX Designer
+            </p>
+
+            <p class="college">
+                Amrita Vishwa Vidyapeetham, Mysuru Campus
+            </p>
         </header>
 
-        <section>
-            <h2>Profile Summary</h2>
-            <p>
-                Motivated Bachelor of Computer Applications (BCA) student
-                currently pursuing the third semester at Amrita Vishwa
-                Vidyapeetham, Mysuru Campus. Interested in programming,
-                web development, and software technologies. Developing
-                knowledge of programming languages, data structures,
-                computer networks, and web technologies. Eager to improve
-                technical skills and gain practical experience in
-                software development.
-            </p>
-        </section>
+        <div class="content">
 
-        <section>
-            <h2>Technical Skills</h2>
-            <ul>
-                <li>C Programming</li>
-                <li>Python Programming</li>
-                <li>HTML</li>
-                <li>CSS</li>
-                <li>Data Structures and Algorithms</li>
-                <li>Computer Networks</li>
-                <li>Database Management Systems</li>
-            </ul>
-        </section>
+            <section>
+                <div class="section-heading">
+                    <span class="section-number">01</span>
+                    <h2>Profile Summary</h2>
+                    <div class="heading-line"></div>
+                </div>
 
-        <section>
-            <h2>Academic Experience</h2>
-            <h3>BCA Coursework and Laboratory Practice</h3>
-            <p>
-                Practising programming exercises and completing academic
-                assignments as part of the BCA curriculum. Learning
-                problem-solving, web page development, programming
-                fundamentals, and core computer science concepts.
-            </p>
-        </section>
+                <p class="summary">
+                    Motivated Bachelor of Computer Applications student
+                    currently pursuing the third semester at Amrita
+                    Vishwa Vidyapeetham, Mysuru Campus. Interested in
+                    software development, web technologies, UI/UX design,
+                    cloud computing, and data analytics. Developing
+                    programming and problem-solving skills through
+                    academic coursework and practical exercises.
+                    Eager to explore new technologies and create
+                    useful, user-friendly digital solutions.
+                </p>
+            </section>
 
-        <section>
-            <h2>Education</h2>
-            <h3>Bachelor of Computer Applications (BCA)</h3>
-            <p>Amrita Vishwa Vidyapeetham, Mysuru Campus</p>
-            <p>Third Semester</p>
-        </section>
+            <section>
+                <div class="section-heading">
+                    <span class="section-number">02</span>
+                    <h2>Technical Skills</h2>
+                    <div class="heading-line"></div>
+                </div>
 
-        <section id="projects">
-            <h2>Projects and Practical Work</h2>
+                <div class="skills">
+                    <div class="skill">C Programming</div>
+                    <div class="skill">Python</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
+                    <div class="skill">Data Structures</div>
+                    <div class="skill">Computer Networks</div>
+                    <div class="skill">Database Management</div>
+                    <div class="skill">Web Development</div>
+                    <div class="skill">UI/UX Design</div>
+                </div>
+            </section>
 
-            <h3>HTML Web Page Development</h3>
-            <p>
-                Practising the creation of web pages using HTML elements,
-                headings, paragraphs, links, and tables.
-            </p>
+            <section>
+                <div class="section-heading">
+                    <span class="section-number">03</span>
+                    <h2>Projects & Practical Work</h2>
+                    <div class="heading-line"></div>
+                </div>
 
-            <h3>Python Programming Exercises</h3>
-            <p>
-                Practising Python programs using conditional statements,
-                loops, lists, and basic problem-solving techniques.
-            </p>
+                <div class="card">
+                    <div class="subtitle">Web Development</div>
+                    <h3>Personal Resume Website</h3>
 
-            <h3>Data Structures and Algorithms</h3>
-            <p>
-                Learning and implementing searching, sorting, and
-                fundamental data structure operations.
-            </p>
-        </section>
+                    <p>
+                        Designed a personal resume webpage using HTML
+                        and CSS, focusing on structured content,
+                        professional colours, responsive layouts,
+                        and clear visual presentation.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="subtitle">UI/UX Design</div>
+                    <h3>User Interface & Experience Design</h3>
+
+                    <p>
+                        Exploring UI/UX design principles, including
+                        colour theory, typography, visual hierarchy,
+                        layout design, and usability to create
+                        user-friendly digital interfaces.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="subtitle">Interface Design</div>
+                    <h3>Website Interface Concept</h3>
+
+                    <p>
+                        Exploring website interface concepts with an
+                        emphasis on intuitive navigation, consistent
+                        visual elements, readable content, and a
+                        positive user experience.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="subtitle">Programming</div>
+                    <h3>Python Programming Exercises</h3>
+
+                    <p>
+                        Practising programming fundamentals, conditional
+                        statements, loops, lists, and problem-solving
+                        through academic exercises.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <div class="subtitle">Computer Science</div>
+                    <h3>Data Structures & Algorithms</h3>
+
+                    <p>
+                        Studying and practising searching, sorting,
+                        and fundamental data structure operations
+                        as part of the BCA curriculum.
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-heading">
+                    <span class="section-number">04</span>
+                    <h2>Education</h2>
+                    <div class="heading-line"></div>
+                </div>
+
+                <div class="card">
+                    <div class="education-name">
+                        Bachelor of Computer Applications (BCA)
+                    </div>
+
+                    <p class="education-details">
+                        Amrita Vishwa Vidyapeetham, Mysuru Campus
+                    </p>
+
+                    <p class="education-details">
+                        Currently pursuing the 3rd semester
+                    </p>
+                </div>
+            </section>
+
+            <section>
+                <div class="section-heading">
+                    <span class="section-number">05</span>
+                    <h2>Career Interests</h2>
+                    <div class="heading-line"></div>
+                </div>
+
+                <div class="interests">
+                    <span class="interest">Software Development</span>
+                    <span class="interest">Web Development</span>
+                    <span class="interest">UI/UX Design</span>
+                    <span class="interest">Application Development</span>
+                    <span class="interest">Cloud Computing</span>
+                    <span class="interest">Data Analytics</span>
+                </div>
+            </section>
+
+        </div>
 
         <footer>
-            <p>Resume | Moulya MC</p>
+            MOULYA MC &nbsp; | &nbsp; LEARN • DESIGN • DEVELOP
         </footer>
 
     </div>
